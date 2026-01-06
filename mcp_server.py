@@ -6,17 +6,11 @@ curl -X POST http://localhost:5001/tools/create \
   -d '{"title":"New announcement","content":"This is the announcement content."}'
 """
 
-# python3 -m venv [name your ve here]
-
-# [ve]\Scripts\activate
-
 from flask import Flask, request
 
 app = Flask(__name__)
 
 announcements = []
-
-
 
 @app.route("/tools", methods=["GET"])
 def get_tools():
